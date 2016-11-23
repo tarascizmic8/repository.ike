@@ -277,4 +277,18 @@ em procura livre na internet.. Enjoy !![/COLOR]
     <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
   </extension>
 </addon>
+
+<addon id="Sources" name="[COLOR lawngreen]Sources[/COLOR]" version="1.0.1" provider-name="[COLOR blue]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Sources.Ike</summary>
+    <description lang="en">Sources.Ike</description>
+    <platform>all</platform>
+  </extension>
+</addon>
 </addons>
