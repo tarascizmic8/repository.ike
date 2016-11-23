@@ -45,7 +45,7 @@ em procura livre na internet.. Enjoy !![/B][/COLOR]
 	<extension point="xbmc.addon.repository" name="repository.ike">
 		<info compressed="false">http://raw.github.com/Ikesantos/repository.ike/master/addons.xml</info>
 		<checksum>http://raw.github.com/Ikesantos/repository.ike/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.github.com/Ikesantos/repository.repo/master/repo/</datadir>
+		<datadir zip="true">http://raw.github.com/Ikesantos/repository.ike/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Ike.Github</summary>
