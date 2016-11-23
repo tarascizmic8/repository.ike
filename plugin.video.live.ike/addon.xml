@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.live.ike"
        name="[COLOR lime][B]IKE[/B][/COLOR]"
-       version="2.7.2"
+       version="2.7.3"
        provider-name="[COLOR red][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -22,11 +22,11 @@
     <provides>video</provides>
   </extension>
   
-     <extension point="xbmc.addon.repository" name="shani repository">
-        <info compressed="false">https://offshoregit.com/Shani-08/main/addons.xml</info>
-        <checksum>https://offshoregit.com/Shani-08/main/addons.xml.md5</checksum>
-        <datadir zip="true">https://offshoregit.com/Shani-08/main/zips/</datadir>
-    </extension>
+     <extension point="xbmc.addon.repository" name="repository.ike">
+		<info compressed="false">http://raw.github.com/Ikesantos/repository.ike/master/addons.xml</info>
+		<checksum>http://raw.github.com/Ikesantos/repository.ike/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/Ikesantos/repository.ike/master/repo/</datadir>
+	</extension>
 
   <extension point="xbmc.addon.metadata">
     <summary>[COLOR orange][B]Ike Addon- shamelessly forked from livestreamspro[/B][/COLOR]</summary>
