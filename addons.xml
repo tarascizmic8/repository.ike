@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.live.ike"
+       name="[COLOR lime][B]IKE[/B][/COLOR]"
+       version="2.7.2"
+       provider-name="[COLOR red][B]IKE[/B][/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+     <extension point="xbmc.addon.repository" name="shani repository">
+        <info compressed="false">https://offshoregit.com/Shani-08/main/addons.xml</info>
+        <checksum>https://offshoregit.com/Shani-08/main/addons.xml.md5</checksum>
+        <datadir zip="true">https://offshoregit.com/Shani-08/main/zips/</datadir>
+    </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>[COLOR orange][B]Ike Addon- shamelessly forked from livestreamspro[/B][/COLOR]</summary>
+    <description>
+        [COLOR cyan][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis
+em procura livre na internet.. Enjoy !![/B][/COLOR]
+
+
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.ike" name="Repo Github" version="0.0.2" provider-name="Ike">
+	<extension point="xbmc.addon.repository" name="Demonstration Add-on Repository">
+		<info compressed="false">http://raw.github.com/Ikesantos/repository.ike/master/addons.xml</info>
+		<checksum>http://raw.github.com/Mafarricos/repository.ike/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/Mafarricos/repository.ike/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Ike.Github</summary>
+		<description>Ike.Repo.Github</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
