@@ -325,7 +325,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="Special" name="[COLOR lime]Special.Ike.Build[/COLOR]" version="1.0.0" provider-name="[COLOR blue]Ike[/COLOR]">
+<addon id="Special.Ike" name="[COLOR lime]Special.Ike[/COLOR]" version="1.0.0" provider-name="[COLOR blue]Ike[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
