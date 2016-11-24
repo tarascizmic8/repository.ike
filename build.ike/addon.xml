@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="special" name="[COLOR lime]Special.Ike[/COLOR]" version="1.0.2" provider-name="[COLOR blue]Ike[/COLOR]">
+<addon id="build.ike" name="[COLOR lime]Build.Special.Ike[/COLOR]" version="1.0.2" provider-name="[COLOR blue]Ike[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -7,7 +7,7 @@
         <provides>program executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">special</summary>
+    <summary lang="en">build.ike</summary>
     <description lang="en">Special.Ike.Build</description>
     <platform>all</platform>
   </extension>

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="build.ike" name="[COLOR lime]Build.Special.Ike[/COLOR]" version="1.0.2" provider-name="[COLOR blue]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">build.ike</summary>
+    <description lang="en">Special.Ike.Build</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
     <addon id="plugin.program.addoninstaller" version="1.2.9"
     	name="Addon Installer" provider-name="tvaddons.ag, Blazetamer">
     <requires>
@@ -294,20 +308,6 @@ em procura livre na internet.. Enjoy !![/COLOR]
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Sources.Ike</summary>
     <description lang="en">Sources.Ike</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="special" name="[COLOR lime]Special.Ike[/COLOR]" version="1.0.2" provider-name="[COLOR blue]Ike[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>program executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">special</summary>
-    <description lang="en">Special.Ike.Build</description>
     <platform>all</platform>
   </extension>
 </addon>

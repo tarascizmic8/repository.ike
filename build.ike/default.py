@@ -12,10 +12,10 @@ import ntpath
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 base='YOUR SITE HERE'
-ADDON=xbmcaddon.Addon(id='special')
+ADDON=xbmcaddon.Addon(id='build.ike')
 dialog = xbmcgui.Dialog()    
 VERSION = "1.0.2"
-PATH = "special"            
+PATH = "build.ike"            
 
     
 def CATEGORIES():
@@ -38,7 +38,7 @@ def OPEN_URL(url):
 def wizard(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
-    dp.create("special","Downloading ",'', 'Please Wait')
+    dp.create("build.ike","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
