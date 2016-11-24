@@ -270,7 +270,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="repository.ike" name="Repo Github" version="1.1" provider-name="Ike">
+<addon id="repository.ike" name="Ike.Repo.Github" version="1.2" provider-name="Ike">
 	<extension point="xbmc.addon.repository" name="repository.ike">
 		<info compressed="false">http://raw.github.com/Ikesantos/repository.ike/master/addons.xml</info>
 		<checksum>http://raw.github.com/Ikesantos/repository.ike/master/addons.xml.md5</checksum>
@@ -321,6 +321,20 @@ em procura livre na internet.. Enjoy !![/COLOR]
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Sources.Ike</summary>
     <description lang="en">Sources.Ike</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="special.ike" name="Ike.Build Special" version="1.0.0" provider-name="Ike">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">special.ike</summary>
+    <description lang="en">Ike.Special.Build</description>
     <platform>all</platform>
   </extension>
 </addon>
