@@ -12,14 +12,14 @@ import ntpath
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 base='YOUR SITE HERE'
-ADDON=xbmcaddon.Addon(id='Special.Ike.Build')
+ADDON=xbmcaddon.Addon(id='Special')
 dialog = xbmcgui.Dialog()    
 VERSION = "1.0.0"
-PATH = "Special.Ike.Build"            
+PATH = "Special"            
 
     
 def CATEGORIES():
-    link = OPEN_URL('https://www.dropbox.com/s/eobnl1duze8pbcr/Special.Build.zip?dl=1').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://www.dropbox.com/s/4ah2x9bu3fwrv3a/wizard.txt?dl=1').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
@@ -38,7 +38,7 @@ def OPEN_URL(url):
 def wizard(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
-    dp.create("Special.Ike.Build","Downloading ",'', 'Please Wait')
+    dp.create("Special","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
