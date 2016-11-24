@@ -306,8 +306,8 @@ em procura livre na internet.. Enjoy !![/COLOR]
         <provides>program executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Special.Ike</summary>
-    <description lang="en">Special.Ike</description>
+    <summary lang="en">special</summary>
+    <description lang="en">Special.Ike.Build</description>
     <platform>all</platform>
   </extension>
 </addon>
