@@ -325,16 +325,16 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="special.ike" name="Ike.Build Special" version="1.0.0" provider-name="Ike">
+<addon id="Special.Ike.Build" name="[COLOR lime]Special.Ike.Build[/COLOR]" version="1.0.1" provider-name="[COLOR blue]Ike[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video executable</provides>
+        <provides>program executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">special.ike</summary>
-    <description lang="en">Ike.Special.Build</description>
+    <summary lang="en">Special.Ike</summary>
+    <description lang="en">Special.Ike</description>
     <platform>all</platform>
   </extension>
 </addon>
