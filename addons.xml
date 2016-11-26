@@ -200,7 +200,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 </addon>
 
 <addon id="plugin.video.p2psport"
-	name="[COLOR green]*[/COLOR]P2P Sport"
+	name="P2P Sport"
 	version="0.1.4"
 	provider-name="natko1412,Extracsaba">
   <requires>
