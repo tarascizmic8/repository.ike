@@ -203,7 +203,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 </addon>
 
 <addon id="plugin.video.p2psport"
-	name="[COLOR green]Ike[/COLOR]P2P Sport"
+	name="[COLOR green]p2psport[/COLOR]"
 	version="0.1.4"
 	provider-name="natko1412">
   <requires>
