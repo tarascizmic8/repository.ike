@@ -240,7 +240,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 
 <addon id="plugin.video.plexus-streams"
        name="Plexus-Streams"
-       version="1.0.15g"
+       version="1.0.15j"
        provider-name="D4FC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

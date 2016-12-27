@@ -1,4 +1,13 @@
 ===== Stable Versions ========
+[B]v1.0.15j (2016/11/14)[/B]
+- Remove useless entry
+
+[B]v1.0.15i (2016/11/14)[/B]
+- Fix ArenaVision agenda
+
+[B]v1.0.15h (2016/11/06)[/B]
+- Add tumarcador
+
 [B]v1.0.15g (2016/08/13)[/B]
 - Fix ArenaVision agenda
 

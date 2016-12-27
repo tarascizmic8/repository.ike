@@ -36,9 +36,9 @@ def arenavision_menu():
 		source = requests.get(base_url,headers=headers).text
 	except: source="";xbmcgui.Dialog().ok(translate(40000),translate(40128))
 	if source:
-		match = re.compile('leaf"><a href="(.+?)">(.+?)</a').findall(source)
+		match = re.compile('leaf"><a href="([^"]+?)">(.+?)</a').findall(source)
 		for link, nome in match:
-			if "agenda" in nome.lower():
+			if "events" in nome.lower():
 				addDir("[B][COLOR red]Agenda/Schedule[/COLOR][/B]",base_url+link,401,os.path.join(current_dir,"icon.png"),1,True,parser="arenavision",parserfunction="arenavision_schedule")
 			elif "#" in nome.lower() or "av" in nome.lower() or "arenavision" in nome.lower():
 				addDir(nome,base_url+link,401,os.path.join(current_dir,"icon.png"),1,False,parser="arenavision",parserfunction="arenavision_streams")
