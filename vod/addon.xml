@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="vod" name="[COLOR lime]Vod.Ike[/COLOR]" version="1.0.3" provider-name="[COLOR blue]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Vod.Ike</summary>
+    <description lang="en">vod.Ike</description>
+    <platform>all</platform>
+  </extension>
+</addon>
