@@ -381,7 +381,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
-<addon id="repository.ike" name="[COLOR red][B]Ike.Repo.Github[/B][/COLOR]" version="1.4" provider-name="[COLOR lime][B]IKE[/B][/COLOR]">
+<addon id="repository.ike" name="[COLOR red][B]Ike.Repo.Github[/B][/COLOR]" version="1.5" provider-name="[COLOR lime][B]IKE[/B][/COLOR]">
 	<extension point="xbmc.addon.repository" name="repository.ike">
 		<info compressed="false">http://raw.github.com/Ikesantos/repository.ike/master/addons.xml</info>
 		<checksum>http://raw.github.com/Ikesantos/repository.ike/master/addons.xml.md5</checksum>
