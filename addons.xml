@@ -111,7 +111,7 @@ Readbufferfactor : 20</description>
 
 <addon id="plugin.video.live.ike"
        name="[COLOR lime][B]IKE[/B][/COLOR]"
-       version="2.7.3"
+       version="2.7.4"
        provider-name="[COLOR red][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -311,7 +311,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 
 <addon
   id="plugin.video.SportsDevil"
-  version="2"
+  version="2016.12.31"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -320,7 +320,6 @@ em procura livre na internet.. Enjoy !![/COLOR]
    <import addon="script.module.six" />
    <import addon="script.module.requests" />
    <import addon="script.module.livestreamer" />
-   <import addon="script.module.pydevd" version="4.4.0" optional="true"/>
   </requires>
   <extension
     point="xbmc.python.pluginsource"
