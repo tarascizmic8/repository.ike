@@ -152,7 +152,7 @@ em procura livre na internet.. Enjoy !![/B][/COLOR]
 
 <addon id="plugin.video.live.magellan"
        name="[COLOR yellow]Magellan[/COLOR]"
-       version="2.7.2"
+       version="2.7.4"
        provider-name="[COLOR orange][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
