@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="kodi.17" name="[COLOR cyan]Build.Kodi.17[/COLOR]" version="1.0.4" provider-name="[COLOR blue]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Build.ike</summary>
+    <description lang="en">Build.Kodi.17</description>
+    <platform>all</platform>
+  </extension>
+</addon>
