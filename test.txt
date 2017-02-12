@@ -1,0 +1,23 @@
+<item>
+<title>[COLOR red][I][B][COLOR lime]»»»»»»[/COLOR] IKE ADDON (ADDON GRATIS) [COLOR lime]««««««[/COLOR][/I][/B][/COLOR]</title>
+<link>http://ignorame</link>
+<thumbnail>http://www.montana.edu/earthsciences/images/Earth-Sciences/info_icon.png</thumbnail>
+<fanart>http://www.denmaur.com/New%202013%20Intranet%20Site/Photos/Info.jpg</fanart>
+<externallink>http://pastebin.com/raw/</externallink>
+</item>
+ 
+<item>
+<title>[COLOR white][I][B][COLOR lime]»»[/COLOR]CANAIS.PORTUGAL.ESPANHA.VOD[/I][/B][/COLOR]</title>
+<link>http://ignorame</link>
+<thumbnail>http://114.imagebam.com/download/EBOH_giH6T-KNSszlfRR_Q/47632/476311586/portugal.png</thumbnail>
+<fanart>https://www.meo.pt/PublishingImages/MEO/ecommerce/meolv1/campanha-rentree-ronaldos-header-l.jpg</fanart>
+<externallink>http://pastebin.com/raw/znpKLR9z</externallink>
+</item>
+ 
+<item>
+<title>[COLOR white][I][B][COLOR lime]»»[/COLOR]CANAIS.DESPORTO[/I][/B][/COLOR]</title>
+<link>http://ignorame</link>
+<thumbnail>http://www.rtc.cv/admin/imgBD/noticias/desporto01_26_10_2014.jpg</thumbnail>
+<fanart>http://b.vimeocdn.com/ts/184/693/184693946_640.jpg</fanart>
+<externallink>http://pastebin.com/raw/dEvxErRV</externallink>
+</item>
