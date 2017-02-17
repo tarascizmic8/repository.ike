@@ -376,7 +376,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
 
 <addon
   id="plugin.video.SportsDevil"
-  version="999920170209"
+  version="2017.02.09"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -393,7 +393,7 @@ em procura livre na internet.. Enjoy !![/COLOR]
    <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Ya me cansé de ponerlo en Inglés... a partir de ahora todo en Español, el mejor idioma del mundo :-)</summary>
+    <summary>Alterado por Ike Santos Para poder ser atualizado por Repositorio</summary>
     <description>Para poder ver múltiples enlaces de canales, tanto en los módulos como en 'llamadas' desde otros plugins... Modificado por DarioMO: 01/02/2017 (de la versión de Hubba del 31/12/2016 y Jairox 26/01/2017)... +Info en Registro de Cambios (Gracias Goldonx, Nano, JairoX y JxxxxxX!!)... Soporte para llamadas p2p con PluginS p2pStreamS y PLEXUS</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
@@ -491,6 +491,19 @@ em procura livre na internet.. Enjoy !![/COLOR]
 		<summary>[COLOR blue][B]Ike.Repo.Github[/B][/COLOR]</summary>
 		<description>[COLOR red][B]Ike.Repo.Github[/B][/COLOR]</description>
 		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.noobsandnerds" name="noobsandnerds Repository" version="1.2" provider-name="noobsandnerds">
+	<extension point="xbmc.addon.repository" name="noobsandnerds Repository">
+		<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Home of The Community Portal</summary>
+		<description>Visit www.noobsandnerds.com and become a part of our great family, you get to choose what The Community Portal holds!</description>
 		<platform>all</platform>
 	</extension>
 </addon>
