@@ -176,7 +176,7 @@ Readbufferfactor : 20</description>
 
 <addon id="plugin.video.live.ike"
        name="[COLOR lime][B]IKE[/B][/COLOR]"
-       version="2.7.4"
+       version="2.7.5"
        provider-name="[COLOR red][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -204,10 +204,13 @@ Readbufferfactor : 20</description>
 	</extension>
 
   <extension point="xbmc.addon.metadata">
-    <summary>[COLOR orange][B]Ike Addon- shamelessly forked from livestreamspro[/B][/COLOR]</summary>
+    <summary>[COLOR orange][B]Ike Addon- Addon Gratis e sem Donativos[/B][/COLOR]</summary>
     <description>
         [COLOR cyan][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis
-em procura livre na internet.. Enjoy !![/B][/COLOR]
+em procura livre na internet..
+Grupo do Facebook ;https://www.facebook.com/groups/1558201737811754/?ref=group_cover
+Canal do Youtube ;https://www.youtube.com/channel/UCBwpwTi1InHtUSnPJkP93mw
+ Enjoy !![/B][/COLOR]
 
 
     </description>
