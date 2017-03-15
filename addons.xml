@@ -176,7 +176,7 @@ Readbufferfactor : 20</description>
 
 <addon id="plugin.video.live.ike"
        name="[COLOR lime][B]IKE[/B][/COLOR]"
-       version="2.7.5"
+       version="2.7.7"
        provider-name="[COLOR red][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -206,12 +206,11 @@ Readbufferfactor : 20</description>
   <extension point="xbmc.addon.metadata">
     <summary>[COLOR orange][B]Ike Addon- Addon Gratis e sem Donativos[/B][/COLOR]</summary>
     <description>
-        [COLOR cyan][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis
+        [COLOR aqua][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis
 em procura livre na internet..
 Grupo do Facebook ;https://www.facebook.com/groups/1558201737811754/?ref=group_cover
 Canal do Youtube ;https://www.youtube.com/channel/UCBwpwTi1InHtUSnPJkP93mw
  Enjoy !![/B][/COLOR]
-
 
     </description>
     <platform>all</platform>
@@ -679,20 +678,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <license>Simplified BSD</license>
     <source>https://github.com/chrippa/livestreamer.git</source>
     <website>http://livestreamer.io</website>
-  </extension>
-</addon>
-
-<addon id="Sources" name="[COLOR lawngreen]Sources[/COLOR]" version="1.0.1" provider-name="[COLOR blue]Ike[/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>program executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Sources.Ike</summary>
-    <description lang="en">Sources.Ike</description>
-    <platform>all</platform>
   </extension>
 </addon>
 

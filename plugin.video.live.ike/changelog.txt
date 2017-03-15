@@ -1,5 +1,17 @@
-Version 2.7.5
-Removed source file
+[B]Version 2.7.7[/B]
+download as mp3 if the name contains [mp3]
+[B]Version 2.7.6[/B]
+dont show error when regex contains notplayable --bug fix
+[B]Version 2.7.5[/B]
+dont show error when regex contains notplayable
+[B]Version 2.7.4[/B]
+proxy play shows progress and notification
+[B]Version 2.7.3[/B]
+regex support in title, useful in list
+[B]Version 2.7.2[/B]
+removed extension
+Version 2.7.1
+DES support for decryption
 Version 2.7.0
 youtube in playone
 Version 2.6.9

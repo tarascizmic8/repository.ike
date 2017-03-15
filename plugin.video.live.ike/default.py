@@ -381,6 +381,9 @@ def getData(url,fanart, data=None):
                 if lcount>1: linkedUrl=''
 
                 name = channel('name')[0].string
+                try:
+                    name=processPyFunction(name)
+                except: pass                
                 thumbnail = channel('thumbnail')[0].string
                 if thumbnail == None:
                     thumbnail = ''
@@ -497,6 +500,9 @@ def getChannelItems(name,url,fanart):
         for channel in channel_list('subchannel'):
             name = channel('name')[0].string
             try:
+                name=processPyFunction(name)
+            except: pass
+            try:
                 thumbnail = channel('thumbnail')[0].string
                 if thumbnail == None:
                     raise
@@ -578,6 +584,10 @@ def getItems(items,fanart,dontLink=False):
                 name = item('title')[0].string
                 if name is None:
                     name = 'unknown?'
+                try:
+                    name=processPyFunction(name)
+                except: pass
+                
             except:
                 addon_log('Name Error')
                 name = ''
@@ -1212,7 +1222,7 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
                             link=javascriptUnEscape(link)
                         else:
                             link=m['page']
-                if '$pyFunction:playmedia(' in m['expres'] or 'ActivateWindow'  in m['expres']  or '$PLAYERPROXY$=' in url  or  any(x in url for x in g_ignoreSetResolved):
+                if '$pyFunction:playmedia(' in m['expres'] or 'ActivateWindow'  in m['expres'] or 'RunPlugin'  in m['expres']  or '$PLAYERPROXY$=' in url  or  any(x in url for x in g_ignoreSetResolved):
                     setresolved=False
                 if  '$doregex' in m['expres']:
                     m['expres']=getRegexParsed(regexs, m['expres'],cookieJar,recursiveCall=True,cachedPages=cachedPages)
@@ -1231,7 +1241,7 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
                             val=doEval(m['expres'].split('$pyFunction:')[1],link,cookieJar,m)
                         else:
                             val=doEvalFunction(m['expres'],link,cookieJar,m)
-                        if 'ActivateWindow' in m['expres']: return
+                        if 'ActivateWindow' in m['expres'] or 'RunPlugin' in m['expres']  : return '',False
                         if forCookieJarOnly:
                             return cookieJar# do nothing
                         if 'listrepeat' in m:
@@ -1391,6 +1401,9 @@ def getConfiguredProxy():
         
 def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, proxypass=None): #jairox
 
+    if media_url==None or media_url=='':
+        xbmc.executebuiltin("XBMC.Notification(Liveike,Unable to play empty Url,5000,"+icon+")")
+        return
     progress = xbmcgui.DialogProgress()
     progress.create('Progress', 'Playing with custom proxy')
     progress.update( 10, "", "setting proxy..", "" )
@@ -1408,27 +1421,41 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
         else:
             setKodiProxy( proxyip + ':' + port + ':0')
 
-        #print 'proxy setting complete', getConfiguredProxy()
+        print 'proxy setting complete playing',media_url
         proxyset=True
         progress.update( 80, "", "setting proxy complete, now playing", "" )
         
-        progress.close()
-        progress=None
+
         import  CustomPlayer
         player = CustomPlayer.MyXBMCPlayer()
+        player.pdialogue==progress
         listitem = xbmcgui.ListItem( label = str(name), iconImage = iconImage, thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=media_url )
         player.play( media_url,listitem)
         xbmc.sleep(1000)
-        while player.is_active:
-            xbmc.sleep(200)
+        #while player.is_active:
+        #    xbmc.sleep(200)
+        import time
+        beforestart=time.time()
+        try:
+            while player.is_active:
+                xbmc.sleep(1000)       
+                if player.urlplayed==False and time.time()-beforestart>12:
+                    print 'failed!!!'
+                    xbmc.executebuiltin("XBMC.Notification(Liveike,Unable to play check proxy,5000,"+icon+")")
+                    break
+                #xbmc.sleep(1000)
+        except: pass
+
+        progress.close()
+        progress=None
     except:
         traceback.print_exc()
     if progress:
         progress.close()
     if proxyset:
-#        print 'now resetting the proxy back'
+        print 'now resetting the proxy back'
         setKodiProxy(existing_proxy)
-#        print 'reset here'
+        print 'reset here'
     return ''
 
 
@@ -2391,6 +2418,7 @@ def play_playlist(name, mu_playlist,queueVideo=None):
 
 
 def download_file(name, url):
+        
         if addon.getSetting('save_location') == "":
             xbmc.executebuiltin("XBMC.Notification('Liveike','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
@@ -2486,6 +2514,7 @@ def ytdl_download(url,title,media_type='video'):
     # play in xbmc while playing go back to contextMenu(c) to "!!Download!!"
     # Trial yasceen: seperate |User-Agent=
     import youtubedl
+    
     if not url == '':
         if media_type== 'audio':
             youtubedl.single_YD(url,download=True,audio=True)
@@ -2697,7 +2726,10 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
 
         
 def playsetresolved(url,name,iconimage,setresolved=True,reg=None):
-    print url
+    print 'playsetresolved',url,setresolved
+    if url==None: 
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
+        return
     if setresolved:
         setres=True
         if '$$LSDirect$$' in url:
@@ -3095,28 +3127,29 @@ elif mode==17 or mode==117:
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
     else:
         url,setresolved = getRegexParsed(regexs, url)
-        #print repr(url),setresolved,'imhere'
-        if url:
-            if '$PLAYERPROXY$=' in url:
-                url,proxy=url.split('$PLAYERPROXY$=')
-                print 'proxy',proxy
-                #Jairox mod for proxy auth
-                proxyuser = None
-                proxypass = None
-                if len(proxy) > 0 and '@' in proxy:
-                    proxy = proxy.split(':')
-                    proxyuser = proxy[0]
-                    proxypass = proxy[1].split('@')[0]
-                    proxyip = proxy[1].split('@')[1]
-                    port = proxy[2]
-                else:
-                    proxyip,port=proxy.split(':')
+        print repr(url),setresolved,'imhere'
+        if not (regexs and 'notplayable' in regexs and not url):        
+            if url:
+                if '$PLAYERPROXY$=' in url:
+                    url,proxy=url.split('$PLAYERPROXY$=')
+                    print 'proxy',proxy
+                    #Jairox mod for proxy auth
+                    proxyuser = None
+                    proxypass = None
+                    if len(proxy) > 0 and '@' in proxy:
+                        proxy = proxy.split(':')
+                        proxyuser = proxy[0]
+                        proxypass = proxy[1].split('@')[0]
+                        proxyip = proxy[1].split('@')[1]
+                        port = proxy[2]
+                    else:
+                        proxyip,port=proxy.split(':')
 
-                playmediawithproxy(url,name,iconimage,proxyip,port, proxyuser,proxypass) #jairox
+                    playmediawithproxy(url,name,iconimage,proxyip,port, proxyuser,proxypass) #jairox
+                else:
+                    playsetresolved(url,name,iconimage,setresolved,regexs)
             else:
-                playsetresolved(url,name,iconimage,setresolved,regexs)
-        else:
-            xbmc.executebuiltin("XBMC.Notification(Liveike,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(Liveike,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
@@ -3131,10 +3164,18 @@ elif mode==19:
 
 elif mode==21:
     addon_log("download current file using youtube-dl service")
-    ytdl_download('',name,'video')
+    mtype='video'
+    if '[mp3]' in name:
+        mtype='audio'
+        name=name.replace('[mp3]','')
+    ytdl_download('',name, mtype)
 elif mode==23:
     addon_log("get info then download")
-    ytdl_download(url,name,'video')
+    mtype='video'
+    if '[mp3]' in name:
+        mtype='audio'
+        name=name.replace('[mp3]','')
+    ytdl_download(url,name,mtype)
 elif mode==24:
     addon_log("Audio only youtube download")
     ytdl_download(url,name,'audio')

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.live.ike"
        name="[COLOR lime][B]IKE[/B][/COLOR]"
-       version="2.7.5"
+       version="2.7.7"
        provider-name="[COLOR red][B]IKE[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -27,16 +27,15 @@
 		<checksum>http://raw.github.com/Ikesantos/repository.ike/master/addons.xml.md5</checksum>
 		<datadir zip="true">http://raw.github.com/Ikesantos/repository.ike/master/repo/</datadir>
 	</extension>
-
+  
   <extension point="xbmc.addon.metadata">
     <summary>[COLOR orange][B]Ike Addon- Addon Gratis e sem Donativos[/B][/COLOR]</summary>
     <description>
-        [COLOR cyan][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis 
+        [COLOR aqua][B]Addon Ike : Todos os links disponibilizados no Addon estao disponiveis 
 em procura livre na internet..
 Grupo do Facebook ;https://www.facebook.com/groups/1558201737811754/?ref=group_cover
 Canal do Youtube ;https://www.youtube.com/channel/UCBwpwTi1InHtUSnPJkP93mw
  Enjoy !![/B][/COLOR]
-     
         
     </description>
     <platform>all</platform>
