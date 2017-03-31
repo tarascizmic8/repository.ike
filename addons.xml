@@ -56,6 +56,20 @@
   </extension>
 </addon>
 
+<addon id="phenon" name="[COLOR cyan]Phenon.Ike[/COLOR]" version="1.0.6" provider-name="[COLOR wite]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">PHENON.IKE</summary>
+    <description lang="en">PHENON.IKE</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
     <addon id="plugin.program.addoninstaller" version="1.2.9"
     	name="Addon Installer" provider-name="tvaddons.ag, Blazetamer">
     <requires>
