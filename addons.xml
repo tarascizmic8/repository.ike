@@ -218,8 +218,8 @@ Readbufferfactor : 20</description>
 
 <addon id="plugin.video.live.ike"
        name="[COLOR white][B]IKE[/B][/COLOR]"
-       version="2.7.8"
-       provider-name="[COLOR red][B]IKE[/B][/COLOR]">
+       version="2.7.9"
+       provider-name="[COLOR red][B]IKE SANTOS[/B][/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
