@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="phenon.17" name="[COLOR cyan]Phenon.17[/COLOR]" version="1.0.7" provider-name="[COLOR wite]Ike[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>program executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">PHENON.17</summary>
+    <description lang="en">PHENON.17</description>
+    <platform>all</platform>
+  </extension>
+</addon>
