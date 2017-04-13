@@ -754,34 +754,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
-<addon id="skin.phenon.ike" name="Phenon.Ike" version="1.0.0" provider-name="Ike">
-	<requires>
-		<import addon="xbmc.gui" version="5.10.0"/>
-		<import addon="script.skin.helper.service" version="1.0.0"/>
-		<import addon="script.skinshortcuts" version="0.6.6"/>
-		<import addon="script.artwork.downloader" version="12.0.20"/>
-		<import addon="plugin.program.autocompletion" version="1.0.0"/>
-		<import addon="script.image.resource.select" version="0.1.0"/>
-		<import addon="resource.images.weatherfanart.single" version="0.0.6"/>
-		<import addon="resource.images.moviegenreicons.arctic.zephyr" version="0.0.1"/>
-	</requires>
-	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p"/>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Phenon.Ike- </summary>
-		<summary lang="he">Ike.Skin</summary>
-		<description lang="en">Fork Da skin Phenomenal apenas para uso dos meus seguidores</description>
-		<description lang="he">Phenon. Ike</description>
-		<platform>all</platform>
-		<license>Creative Commons Attribution-NonCommercial</license>
-		<forum></forum>
-		<website></website>
-		<email></email>
-		<source></source>
-	</extension>
-</addon>
-
 <addon
   id="skin.xonfluence"
   version="3.2.10"
