@@ -695,18 +695,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
-<addon id="resource.uisounds.titan.modern" version="1.0.0" name="Titan UI Sounds (Modern)" provider-name="marcelveldt,mgonzales">
-  <requires>
-    <import addon="kodi.resource" version="1.0.0"/>
-  </requires>
-  <extension point="kodi.resource.uisounds"/>
-  <extension point="kodi.addon.metadata">
-    <summary lang="en">Titan UI Sounds (Modern)</summary>
-    <description lang="en">Titan UI Sounds (Modern)</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="script.module.liveresolver"
      name="LiveResolver"
      version="0.1.48"
