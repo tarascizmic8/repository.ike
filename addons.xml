@@ -339,6 +339,30 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
+<addon id="plugin.video.plexus-streams"
+       name="Plexus-Streams"
+       version="1.0.15m"
+       provider-name="D4FC">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.pytz" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.mechanize" version="0.2.6"/>
+    <import addon="program.plexus" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plexus wrapper</summary>
+    <description lang="en">P2P-Streams fork that works as a Plexus wrapper</description>
+    <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.quertv" name="QuerTv" version="1.0.1" provider-name="QuerTv">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -386,6 +410,31 @@ em procura livre na internet.. Enjoy !![/COLOR]
   </extension>
 </addon>
 
+<addon id="plugin.video.tvgolo"
+       name="OKGoals"
+       version="1.0.6"
+       provider-name="fightnight">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.urlresolver"  version="1.0.5"/>
+		<import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<language>pt</language>
+		<platform>all</platform>
+		<source>https://github.com/fightnight/fightnight-addons/tree/master/plugin.video.tvgolo</source>
+		<summary lang="en">OKGoals addon for Kodi</summary>
+		<summary lang="pt">OKGoals addon para o Kodi</summary>
+		<description lang="en">The best goals from OKGoals.com on Kodi.</description>
+		<description lang="pt">Os melhor golos do OKGoals.com para o Kodi.</description>
+		<disclaimer lang="en">Independent and opensource addon not endorsed by OKGoals.</disclaimer>
+		<disclaimer lang="pt">Addon independente e opensource nÃ£o afliado com OKGoals.</disclaimer>
+    </extension>
+</addon>
+
 <addon id="plugin.video.tviplayer" name="TVI Kodi Player" version="0.2.0" provider-name="darksky83">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -406,6 +455,29 @@ em procura livre na internet.. Enjoy !![/COLOR]
     <website>http://tviplayer.iol.pt/</website>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.tvpor"
+       name="TV Portuguesa"
+       version="0.5.7"
+       provider-name="fightnight">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.pytz"/>
+		<import addon="script.module.urlresolver"  version="1.0.5"/>
+		<import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Ver canais de TV portugueses e radios no KODI</summary>
+        <description>Ve os teus canais portugueses favoritos e ouve radios no KODI.
+
+O addon apenas inclui streams oficiais.</description>
+        <disclaimer>O autor deste addon NAO e responsavel pelo conteudo dos streams.</disclaimer>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="program.plexus"
@@ -430,19 +502,6 @@ em procura livre na internet.. Enjoy !![/COLOR]
     <forum>http://forums.tvaddons.ag</forum>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="repository.fightnight" name="fightnight repo" version="1.6" provider-name="fightnight">
-	<extension point="xbmc.addon.repository" name="fightnight">
-		<info compressed="false">https://raw.githubusercontent.com/fightnight/f-base/master/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/fightnight/f-base/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/fightnight/f-base/master</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Os meus addons para o XBMC</summary>
-		<description>Os meus addons para o XBMC</description>
-		<platform>all</platform>
-	</extension>
 </addon>
 
 <addon id="repository.ike" name="[COLOR red][B]Ike.Repo.Github[/B][/COLOR]" version="1.7" provider-name="[COLOR lime][B]IKE[/B][/COLOR]">
@@ -471,64 +530,6 @@ em procura livre na internet.. Enjoy !![/COLOR]
         <description></description>
         <platform>all</platform>
     </extension>
-</addon>
-
-<addon id="repository.noobsandnerds" name="noobsandnerds Repository" version="1.2" provider-name="noobsandnerds">
-	<extension point="xbmc.addon.repository" name="noobsandnerds Repository">
-		<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Home of The Community Portal</summary>
-		<description>Visit www.noobsandnerds.com and become a part of our great family, you get to choose what The Community Portal holds!</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.plexus-streams" name="Plexus-Streams Repository" version="1.0.0" provider-name="D4FC">
-	<extension point="xbmc.addon.repository" name="Plexus-Streams Repository">
-		<info compressed="false">https://bitbucket.org/plexus-streams/plexus-streams/raw/releases/addons.xml</info>
-		<checksum>https://bitbucket.org/plexus-streams/plexus-streams/raw/releases/addons.xml.md5</checksum>
-		<datadir zip="true">https://bitbucket.org/plexus-streams/plexus-streams/raw/releases/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Plexus-Streams Repository</summary>
-		<description>Plexus-Streams Repository</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="repository.unofficialsportsdevil" name="Unofficial SportsDevil Repository" version="1.0.0" provider-name="unofficialsportsdevil">
- <extension point="xbmc.addon.repository" name="Unofficial SportsDevil Repository">
-  <dir>
-   <info compressed="false">
-    https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml
-   </info>
-   <checksum>
-    https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
-   </checksum>
-   <datadir zip="true">
-    https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/zips/
-   </datadir>
-  </dir>
-  <info compressed="false">
-   https://offshoregit.com/unofficialsportsdevil/addons.xml
-  </info>
-  <checksum>
-   https://offshoregit.com/unofficialsportsdevil/addons.xml.md5
-  </checksum>
-  <datadir zip="true">https://offshoregit.com/unofficialsportsdevil/</datadir>
- </extension>
- <extension point="xbmc.addon.metadata">
-  <summary>Unofficial SportsDevil Updates for Kodi</summary>
-  <description>Unofficial SportsDevil Updates for Kodi</description>
-  <platform>all</platform>
-  <forum>
-   https://forums.tvaddons.ag/sportsdevil-addon-for-kodi/
-  </forum>
- </extension>
 </addon>
 
 <addon id="resource.uisounds.halloween" version="1.0.1" name="Hallowe'en UI Sounds" provider-name="ClassicNancy">
